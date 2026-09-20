@@ -1595,4 +1595,745 @@ Save
    FORM ELEMENTS
 ========================= */
 
-consw
+const from =
+document.getElementById("bakchodForm");
+
+const progressBar =
+document.getElementById("progressBar");
+
+const progressText =
+document.getElementById("progressText");
+
+const result =
+document.getElementById("result");
+
+const scoreBox =
+document.getElementById("score");
+
+const rankBox =
+document.getElementById("rank");
+
+const resultMessage =
+document.getElementById("resultMessage");
+
+const meterFill =
+document.getElementById("meterFill");
+
+
+/* =========================
+   STOP BROWSER AUTOFILL
+========================= */
+
+window.addEventListener(
+    "pageshow",
+    function(){
+
+        const name =
+        document.getElementById("name");
+
+        const nickname =
+        document.getElementById("nickname");
+
+        /*
+        Browser/Google autofill se agar
+        koi naam aa gaya ho to blank kar do.
+        */
+
+        if(name){
+            name.value = "";
+        }
+
+        if(nickname){
+            nickname.value = "";
+        }
+
+    }
+);
+
+
+/* =========================
+   REQUIRED QUESTIONS
+========================= */
+
+const requiredGroups = [
+
+    "gender",
+    "level",
+    "gyan",
+    "duration",
+    "dialogue",
+    "style",
+    "why",
+    "people",
+    "aunty"
+
+];
+
+
+/* =========================
+   SCORE GROUPS
+========================= */
+
+const scoreGroups = [
+
+    "level",
+    "gyan",
+    "duration",
+    "dialogue",
+    "style",
+    "why",
+    "people",
+    "aunty"
+
+];
+
+
+/* =========================
+   MAX SCORE
+========================= */
+
+const MAX_SCORE = 132;
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+function updateProgress(){
+
+    let completed = 0;
+
+
+    const name =
+    document.getElementById("name")
+    .value
+    .trim();
+
+
+    const nickname =
+    document.getElementById("nickname")
+    .value
+    .trim();
+
+
+    if(name){
+        completed++;
+    }
+
+
+    if(nickname){
+        completed++;
+    }
+
+
+    requiredGroups.forEach(
+        group => {
+
+            const checked =
+            document.querySelector(
+                `input[name="${group}"]:checked`
+            );
+
+
+            if(checked){
+                completed++;
+            }
+
+        }
+    );
+
+
+    const total = 11;
+
+
+    const percent =
+    (completed / total) * 100;
+
+
+    progressText.textContent =
+    `${completed}/${total}`;
+
+
+    progressBar.style.width =
+    percent + "%";
+
+}
+
+
+/* =========================
+   LISTENERS
+========================= */
+
+form.addEventListener(
+    "input",
+    updateProgress
+);
+
+
+form.addEventListener(
+    "change",
+    updateProgress
+);
+
+
+updateProgress();
+
+
+/* =========================
+   SCORE
+========================= */
+
+function getScore(){
+
+    let score = 0;
+
+
+    scoreGroups.forEach(
+        group => {
+
+            const checked =
+            document.querySelector(
+                `input[name="${group}"]:checked`
+            );
+
+
+            if(checked){
+
+                score +=
+                Number(checked.value);
+
+            }
+
+        }
+    );
+
+
+    return score;
+
+}
+
+
+/* =========================
+   RANK
+========================= */
+
+function getRank(score){
+
+    const percent =
+    (score / MAX_SCORE) * 100;
+
+
+    if(percent >= 90){
+
+        return {
+
+            rank:
+            "🔥 LEGENDARY BAKCHOD",
+
+            message:
+            "Bhai tumhari bakchodi ka level alag hi dimension mein hai 😂"
+
+        };
+
+    }
+
+
+    if(percent >= 75){
+
+        return {
+
+            rank:
+            "😂 PRO BAKCHOD",
+
+            message:
+            "Professional level ki bakchodi detected 😂"
+
+        };
+
+    }
+
+
+    if(percent >= 55){
+
+        return {
+
+            rank:
+            "😎 ADVANCED BAKCHOD",
+
+            message:
+            "Experience clearly dikh raha hai 😂"
+
+        };
+
+    }
+
+
+    if(percent >= 35){
+
+        return {
+
+            rank:
+            "🤣 NORMAL BAKCHOD",
+
+            message:
+            "Bakchodi hai, lekin control mein hai."
+
+        };
+
+    }
+
+
+    if(percent >= 20){
+
+        return {
+
+            rank:
+            "🙂 BEGINNER BAKCHOD",
+
+            message:
+            "Training abhi baaki hai 😂"
+
+        };
+
+    }
+
+
+    return {
+
+        rank:
+        "🗿 SHAANT INSAAN",
+
+        message:
+        "Tumhari bakchodi abhi loading mein hai."
+
+    };
+
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+form.addEventListener(
+    "submit",
+    function(e){
+
+        e.preventDefault();
+
+
+        const name =
+        document.getElementById("name")
+        .value
+        .trim();
+
+
+        const nickname =
+        document.getElementById("nickname")
+        .value
+        .trim();
+
+
+        if(!name){
+
+            alert(
+                "Pehle naam likho 😂"
+            );
+
+            return;
+
+        }
+
+
+        if(!nickname){
+
+            alert(
+                "Nickname bhi likho 😭"
+            );
+
+            return;
+
+        }
+
+
+        for(
+            const group of requiredGroups
+        ){
+
+            const checked =
+            document.querySelector(
+                `input[name="${group}"]:checked`
+            );
+
+
+            if(!checked){
+
+                alert(
+                    "Bhai saare questions complete karo 😂"
+                );
+
+                return;
+
+            }
+
+        }
+
+
+        const score =
+        getScore();
+
+
+        const data =
+        getRank(score);
+
+
+        const percent =
+        Math.round(
+            (score / MAX_SCORE) * 100
+        );
+
+
+        scoreBox.textContent =
+        `${percent}%`;
+
+
+        rankBox.textContent =
+        data.rank;
+
+
+        resultMessage.textContent =
+        `${name} aka ${nickname} — ${data.message}`;
+
+
+        meterFill.style.width =
+        percent + "%";
+
+
+        result.style.display =
+        "block";
+
+
+        result.scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+const modal =
+document.getElementById("signatureModal");
+
+
+const canvas =
+document.getElementById("signatureCanvas");
+
+
+const ctx =
+canvas.getContext("2d");
+
+
+const openSignature =
+document.getElementById("openSignature");
+
+
+const closeSignature =
+document.getElementById("closeSignature");
+
+
+const clearSignature =
+document.getElementById("clearSignature");
+
+
+const saveSignature =
+document.getElementById("saveSignature");
+
+
+const signaturePreview =
+document.getElementById("signaturePreview");
+
+
+let drawing = false;
+
+let lastX = 0;
+
+let lastY = 0;
+
+
+/* =========================
+   CANVAS SIZE
+========================= */
+
+function resizeCanvas(){
+
+    const rect =
+    canvas.getBoundingClientRect();
+
+
+    const ratio =
+    window.devicePixelRatio || 1;
+
+
+    canvas.width =
+    rect.width * ratio;
+
+
+    canvas.height =
+    rect.height * ratio;
+
+
+    ctx.setTransform(
+
+        ratio,
+        0,
+        0,
+        ratio,
+        0,
+        0
+
+    );
+
+
+    ctx.lineWidth = 2.5;
+
+    ctx.lineCap = "round";
+
+    ctx.lineJoin = "round";
+
+    ctx.strokeStyle =
+    "#173b2a";
+
+}
+
+
+/* =========================
+   OPEN SIGNATURE
+========================= */
+
+openSignature.addEventListener(
+    "click",
+    function(){
+
+        modal.style.display =
+        "flex";
+
+
+        resizeCanvas();
+
+    }
+);
+
+
+/* =========================
+   CLOSE SIGNATURE
+========================= */
+
+closeSignature.addEventListener(
+    "click",
+    function(){
+
+        modal.style.display =
+        "none";
+
+    }
+);
+
+
+/* =========================
+   CLEAR SIGNATURE
+========================= */
+
+clearSignature.addEventListener(
+    "click",
+    function(){
+
+        ctx.clearRect(
+
+            0,
+            0,
+            canvas.width,
+            canvas.height
+
+        );
+
+    }
+);
+
+
+/* =========================
+   GET POSITION
+========================= */
+
+function getPosition(e){
+
+    const rect =
+    canvas.getBoundingClientRect();
+
+
+    return {
+
+        x:
+        e.clientX - rect.left,
+
+        y:
+        e.clientY - rect.top
+
+    };
+
+}
+
+
+/* =========================
+   START DRAWING
+========================= */
+
+canvas.addEventListener(
+    "pointerdown",
+    function(e){
+
+        drawing = true;
+
+
+        const pos =
+        getPosition(e);
+
+
+        lastX =
+        pos.x;
+
+
+        lastY =
+        pos.y;
+
+
+        canvas.setPointerCapture(
+            e.pointerId
+        );
+
+    }
+);
+
+
+/* =========================
+   DRAW
+========================= */
+
+canvas.addEventListener(
+    "pointermove",
+    function(e){
+
+        if(!drawing){
+            return;
+        }
+
+
+        const pos =
+        getPosition(e);
+
+
+        ctx.beginPath();
+
+
+        ctx.moveTo(
+            lastX,
+            lastY
+        );
+
+
+        ctx.lineTo(
+            pos.x,
+            pos.y
+        );
+
+
+        ctx.stroke();
+
+
+        lastX =
+        pos.x;
+
+
+        lastY =
+        pos.y;
+
+    }
+);
+
+
+/* =========================
+   STOP DRAWING
+========================= */
+
+canvas.addEventListener(
+    "pointerup",
+    function(){
+
+        drawing = false;
+
+    }
+);
+
+
+canvas.addEventListener(
+    "pointercancel",
+    function(){
+
+        drawing = false;
+
+    }
+);
+
+
+/* =========================
+   SAVE SIGNATURE
+========================= */
+
+saveSignature.addEventListener(
+    "click",
+    function(){
+
+        const image =
+        canvas.toDataURL(
+            "image/png"
+        );
+
+
+        signaturePreview.innerHTML =
+        `<img src="${image}" alt="Signature">`;
+
+
+        modal.style.display =
+        "none";
+
+    }
+);
+
+
+/* =========================
+   CLICK OUTSIDE
+========================= */
+
+modal.addEventListener(
+    "click",
+    function(e){
+
+        if(e.target === modal){
+
+            modal.style.display =
+            "none";
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
