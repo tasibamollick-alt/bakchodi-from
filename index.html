@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BAKCHODI KE FARM</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eee6ca;
+    color:#18291e;
+    padding:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff8df;
+    border:3px solid #173b2a;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:relative;
+    text-align:center;
+    padding:35px 20px 25px;
+    overflow:hidden;
+}
+
+.badge{
+    position:absolute;
+    left:25px;
+    top:20px;
+    width:150px;
+    height:105px;
+    border:5px solid #a32626;
+    border-radius:50%;
+    color:#a32626;
+    transform:rotate(-12deg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    font-size:20px;
+    text-align:center;
+}
+
+.badge::before{
+    content:"100% ORIGINAL";
+    position:absolute;
+    bottom:8px;
+    font-size:11px;
+}
+
+.badge::after{
+    content:"★ ★ ★";
+    position:absolute;
+    top:8px;
+    font-size:12px;
+}
+
+header h1{
+    font-family:Georgia,serif;
+    font-size:70px;
+    letter-spacing:2px;
+    color:#173b2a;
+    line-height:.9;
+    font-weight:900;
+}
+
+header h2{
+    font-family:Georgia,serif;
+    font-size:48px;
+    color:#173b2a;
+    margin-top:8px;
+}
+
+.bull{
+    position:absolute;
+    right:22px;
+    top:25px;
+    font-size:90px;
+    filter:grayscale(100%);
+}
+
+.speech{
+    position:absolute;
+    right:20px;
+    top:125px;
+    background:#f4c928;
+    border:3px solid #173b2a;
+    border-radius:30px;
+    padding:12px;
+    width:150px;
+    font-weight:900;
+    font-size:14px;
+}
+
+.banner{
+    margin:18px auto 5px;
+    max-width:700px;
+    background:#173b2a;
+    color:white;
+    padding:8px 20px;
+    font-size:21px;
+    font-weight:900;
+
+    clip-path:polygon(
+        0 0,
+        97% 0,
+        100% 50%,
+        97% 100%,
+        0 100%,
+        3% 50%
+    );
+}
+
+.sub-banner{
+    display:inline-block;
+    background:#b72a2a;
+    color:white;
+    padding:7px 35px;
+    font-weight:900;
+    font-size:18px;
+    margin-top:8px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form{
+    padding:0 14px 20px;
+}
+
+.section{
+    border:2px solid #18291e;
+    border-radius:14px;
+    margin:10px 0;
+    padding:14px;
+    background:#fff9e7;
+}
+
+.section-title{
+    font-size:19px;
+    font-weight:900;
+    margin-bottom:12px;
+}
+
+.question{
+    border:1.5px solid #263b2d;
+    border-radius:12px;
+    padding:12px;
+    margin-bottom:10px;
+    background:#fffbea;
+}
+
+.question h3{
+    font-size:17px;
+    margin-bottom:9px;
+}
+
+.question h3 small{
+    font-weight:normal;
+}
+
+.option-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5px 25px;
+}
+
+.option{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    width:23px;
+    height:23px;
+    accent-color:#173b2a;
+    cursor:pointer;
+}
+
+input[type="text"],
+textarea{
+    width:100%;
+    border:none;
+    border-bottom:2px solid #555;
+    background:transparent;
+    outline:none;
+    padding:8px 5px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:70px;
+    resize:vertical;
+    border:1.5px solid #777;
+    border-radius:8px;
+    background:#fff;
+}
+
+input[type="text"]:focus,
+textarea:focus{
+    border-color:#173b2a;
+}
+
+
+/* =========================
+   NOTICE AREA
+========================= */
+
+.bottom-area{
+    display:grid;
+    grid-template-columns:1.1fr 1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+.farm-box,
+.notice-box,
+.approved-box{
+    border:2px solid #173b2a;
+    border-radius:12px;
+    padding:15px;
+    min-height:120px;
+    background:#fff9e7;
+}
+
+.farm-box{
+    text-align:center;
+}
+
+.farm-box .mini-bull{
+    font-size:48px;
+}
+
+.farm-box h2{
+    font-family:Georgia,serif;
+    font-size:20px;
+    color:#173b2a;
+}
+
+.farm-box p{
+    font-weight:bold;
+    margin-top:6px;
+}
+
+.notice-box h3{
+    background:#173b2a;
+    color:white;
+    padding:5px;
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.notice-box p{
+    font-size:13px;
+    margin:6px 0;
+}
+
+.approved-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.approved{
+    border:4px solid #236044;
+    color:#236044;
+    padding:12px;
+    transform:rotate(-7deg);
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:22px;
+    font-weight:900;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-box{
+    margin:15px 0;
+    padding:12px;
+    border:2px solid #173b2a;
+    border-radius:12px;
+    background:#fff;
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.progress{
+    height:13px;
+    background:#ddd5b8;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#173b2a;
+    transition:.3s;
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature-box{
+    border:2px solid #173b2a;
+    border-radius:12px;
+    padding:12px;
+    background:#fff;
+}
+
+.signature-btn{
+    width:100%;
+    padding:12px;
+    background:#173b2a;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.signature-preview{
+    margin-top:10px;
+    min-height:60px;
+    border:1px dashed #777;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+}
+
+.signature-preview img{
+    max-width:100%;
+    max-height:90px;
+}
+
+
+/* =========================
+   DONE BUTTON
+========================= */
+
+.done-btn{
+    width:100%;
+    margin-top:15px;
+    padding:16px;
+    border:none;
+    background:#173b2a;
+    color:white;
+    font-size:21px;
+    font-weight:900;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.done-btn:hover{
+    background:#28563d;
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result{
+    display:none;
+    margin:20px 14px;
+    padding:25px;
+    border:3px solid #173b2a;
+    border-radius:15px;
+    background:#fff8df;
+    text-align:center;
+}
+
+.result h2{
+    font-family:Georgia,serif;
+    color:#173b2a;
+    font-size:30px;
+}
+
+.score{
+    font-size:55px;
+    font-weight:900;
+    margin:10px;
+    color:#173b2a;
+}
+
+.rank{
+    font-size:25px;
+    font-weight:900;
+    margin:10px;
+}
+
+.meter{
+    height:20px;
+    background:#ddd5b8;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.meter-fill{
+    width:0%;
+    height:100%;
+    background:#173b2a;
+    transition:1s;
+}
+
+.result-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.result-buttons button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.print-btn{
+    background:#173b2a;
+    color:white;
+}
+
+.retry-btn{
+    background:#b72a2a;
+    color:white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    margin-top:15px;
+    background:#173b2a;
+    color:white;
+    text-align:center;
+    padding:13px;
+    font-family:Georgia,serif;
+    font-size:19px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:999;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+
+.modal-content{
+    width:100%;
+    max-width:500px;
+    background:#fff8df;
+    padding:18px;
+    border-radius:15px;
+    border:3px solid #173b2a;
+}
+
+.modal-content h2{
+    margin-bottom:12px;
+}
+
+.canvas-area{
+    height:180px;
+    background:white;
+    border:2px solid #173b2a;
+    border-radius:10px;
+}
+
+#signatureCanvas{
+    width:100%;
+    height:100%;
+    display:block;
+    touch-action:none;
+}
+
+.modal-buttons{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+
+.modal-buttons button{
+    flex:1;
+    padding:11px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.clear-sign{
+    background:#ddd;
+}
+
+.close-sign{
+    background:#b72a2a;
+    color:white;
+}
+
+.save-sign{
+    background:#173b2a;
+    color:white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    body{
+        padding:6px;
+    }
+
+    header{
+        padding:25px 10px 20px;
+    }
+
+    header h1{
+        font-size:43px;
+    }
+
+    header h2{
+        font-size:31px;
+    }
+
+    .badge{
+        position:relative;
+        left:auto;
+        top:auto;
+        margin:auto;
+        width:115px;
+        height:80px;
+        font-size:15px;
+    }
+
+    .bull{
+        display:none;
+    }
+
+    .speech{
+        display:none;
+    }
+
+    .banner{
+        font-size:14px;
+    }
+
+    .sub-banner{
+        font-size:13px;
+        padding:6px 15px;
+    }
+
+    .option-grid{
+        grid-template-columns:1fr;
+        gap:2px;
+    }
+
+    .bottom-area{
+        grid-template-columns:1fr;
+    }
+
+    .result-buttons{
+        flex-direction:column;
+    }
+
+    .question h3{
+        font-size:15px;
+    }
+
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print{
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        box-shadow:none;
+        border:2px solid #000;
+    }
+
+    form,
+    .progress-box,
+    .signature-box,
+    .done-btn,
+    .result-buttons{
+        display:none !important;
+    }
+
+    .result{
+        display:block !important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="badge">
+    BAKCHODI
+</div>
+
+<div class="bull">
+    🐃
+</div>
+
+<div class="speech">
+    BHAI YEH<br>
+    BAKCHODI<br>
+    KA FARM HAI!
+</div>
+
+<h1>BAKCHODI</h1>
+
+<h2>KE FARM</h2>
+
+<div class="banner">
+    ★ &nbsp; YAHAN HAR BAKCHOD KA SWAGAT HAI &nbsp; ★
+</div>
+
+<div class="sub-banner">
+    APPLY KARO &nbsp; ★ &nbsp; BAKCHOD BANO &nbsp; ★ &nbsp; ZINDAGI BANAO
+</div>
+
+</header>
+
+
+<!-- =========================
+     FORM
+========================= -->
+
+<form
+    id="bakchodForm"
+    autocomplete="off"
+    novalidate
+>
+
+
+<!-- =========================
+     PERSONAL INFORMATION
+========================= -->
+
+<div class="section">
+
+
+<!-- NAME -->
+
+<div class="question">
+
+<h3>
+1. Naam
+<small>(Asli wala ya jo yaad rahe):</small>
+</h3>
+
+<input
+    type="text"
+    id="name"
+    name="bakchod_random_name_83921"
+    autocomplete="new-password"
+    autocorrect="off"
+    autocapitalize="words"
+    spellcheck="false"
+    placeholder="Apna naam likho"
+    required
+>
+
+</div>
+
+
+<!-- NICKNAME -->
+
+<div class="question">
+
+<h3>
+2. Nickname / Bakchod Naam:
+</h3>
+
+<input
+    type="text"
+    id="nickname"
+    name="bakchod_random_nickname_62841"
+    autocomplete="new-password"
+    autocorrect="off"
+    autocapitalize="words"
+    spellcheck="false"
+    placeholder="Apna bakchod naam likho"
+    required
+>
+
+</div>
+
+
+<!-- GENDER -->
+
+<div class="question">
+
+<h3>
+3. Tum kaun ho? (Gender):
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+
+<input
+    type="radio"
+    name="gender"
+    value="1"
+>
+
+Ladka
+
+</label>
+
+
+<label class="option">
+
+<input
+    type="radio"
+    name="gender"
+    value="1"
+>
+
+Ladki
+
+</label>
+
+
+<label class="option">
+
+<input
+    type="radio"
+    name="gender"
+    value="1"
+>
+
+Other
+
+</label>
+
+
+<label class="option">
+
+<input
+    type="radio"
+    name="gender"
+    value="1"
+>
+
+Batana nahi hai
+
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     QUESTIONS
+========================= -->
+
+<div class="section">
+
+
+<!-- Q4 -->
+
+<div class="question">
+
+<h3>
+4. Tum kitne level ke bakchod ho?
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+<input
+    type="radio"
+    name="level"
+    value="8"
+>
+Normal
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="level"
+    value="16"
+>
+Ultra
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="level"
+    value="22"
+>
+Ultra Max
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="level"
+    value="28"
+>
+Pro
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="level"
+    value="35"
+>
+Legendary
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Q5 -->
+
+<div class="question">
+
+<h3>
+5. Kya tum logon ko faltu ka gyaan dete ho?
+</h3>
+
+<label class="option">
+<input
+    type="radio"
+    name="gyan"
+    value="15"
+>
+Haan, bina pooche bhi
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="gyan"
+    value="10"
+>
+Kabhi-kabhi
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="gyan"
+    value="5"
+>
+Nahi, main khud gyaan leta hoon
+</label>
+
+</div>
+
+
+<!-- Q6 -->
+
+<div class="question">
+
+<h3>
+6. Bina ruke kitni der bakchodi kar sakte ho?
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+<input
+    type="radio"
+    name="duration"
+    value="5"
+>
+30 minute
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="duration"
+    value="15"
+>
+10–15 ghante
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="duration"
+    value="8"
+>
+1 ghanta
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="duration"
+    value="20"
+>
+Jab tak saamne wala bhaag na jaaye
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="duration"
+    value="12"
+>
+4–5 ghante
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Q7 -->
+
+<div class="question">
+
+<h3>
+7. Favourite dialogue kya hai?
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+<input
+    type="radio"
+    name="dialogue"
+    value="10"
+>
+Bhai sun...
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="dialogue"
+    value="10"
+>
+Chal bakchodi karte hain
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="dialogue"
+    value="10"
+>
+Ek baat bataun?
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="dialogue"
+    value="10"
+>
+Apna alag hi scene hai
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="dialogue"
+    value="10"
+>
+Meri baat sun 😂
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="dialogue"
+    value="10"
+>
+Kuch aur bolta hoon 😭
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Q8 -->
+
+<div class="question">
+
+<h3>
+8. Tumhari bakchodi ka main style?
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+<input
+    type="radio"
+    name="style"
+    value="10"
+>
+Jokes
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="style"
+    value="10"
+>
+Gali-galauj
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="style"
+    value="10"
+>
+Memes
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="style"
+    value="10"
+>
+Random bakchodi
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="style"
+    value="10"
+>
+Faltu gyaan
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Q9 -->
+
+<div class="question">
+
+<h3>
+9. Bakchodi kyon karte ho?
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+<input
+    type="radio"
+    name="why"
+    value="10"
+>
+Maza aata hai
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="why"
+    value="10"
+>
+Doston ko irritate karne ke liye
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="why"
+    value="10"
+>
+Bore ho raha hota hoon
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="why"
+    value="10"
+>
+Bas aadat hai
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Q10 -->
+
+<div class="question">
+
+<h3>
+10. Abhi tak kitne logon ke saath bakchodi ki hai?
+</h3>
+
+<div class="option-grid">
+
+<label class="option">
+<input
+    type="radio"
+    name="people"
+    value="5"
+>
+1–5
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="people"
+    value="15"
+>
+51–100
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="people"
+    value="8"
+>
+6–20
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="people"
+    value="20"
+>
+100+ 💀
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="people"
+    value="12"
+>
+21–50
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Q11 -->
+
+<div class="question">
+
+<h3>
+11. Dost ke ghar ki aunty se bakchodi karoge?
+</h3>
+
+<label class="option">
+<input
+    type="radio"
+    name="aunty"
+    value="12"
+>
+Haan, agar comfortable ho
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="aunty"
+    value="8"
+>
+Sirf Hello Aunty 😂
+</label>
+
+<label class="option">
+<input
+    type="radio"
+    name="aunty"
+    value="3"
+>
+Nahi bhai, risk nahi
+</label>
+
+</div>
+
+
+<!-- Q12 -->
+
+<div class="question">
+
+<h3>
+12. Apne baare mein ek line bolo:
+</h3>
+
+<textarea
+    id="about"
+    name="about"
+    autocomplete="off"
+    autocorrect="off"
+    spellcheck="false"
+    placeholder="Apne baare mein kuch likho..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================
+     BOTTOM BOXES
+========================= -->
+
+<div class="bottom-area">
+
+
+<div class="farm-box">
+
+<div class="mini-bull">
+🐃
+</div>
+
+<h2>
+BAKCHODI KE FARM
+</h2>
+
+<p>
+"KABHI SERIOUS MAT HONA"
+</p>
+
+<p>
+★ ★ ★
+</p>
+
+</div>
+
+
+<div class="notice-box">
+
+<h3>
+IMPORTANT NOTICE:
+</h3>
+
+<p>
+★ Yahan sirf asli bakchod hi allowed hain.
+</p>
+
+<p>
+★ Jhooth bole to turant ban ho sakte ho.
+</p>
+
+<p>
+★ Bakchodi ki koi limit nahi... par izzat zaroor rakho.
+</p>
+
+</div>
+
+
+<div class="approved-box">
+
+<div class="approved">
+
+APPROVED
+
+<br>
+
+<small>
+BY BAKCHODI KE FARM
+</small>
+
+<br>
+
+★★★
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     PROGRESS
+========================= -->
+
+<div class="progress-box">
+
+<div class="progress-top">
+
+<span>
+Form Progress
+</span>
+
+<span id="progressText">
+0/11
+</span>
+
+</div>
+
+<div class="progress">
+
+<div
+    class="progress-bar"
+    id="progressBar"
+></div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SIGNATURE
+========================= -->
+
+<div class="section">
+
+<div class="section-title">
+✍️ Signature
+</div>
+
+<div class="signature-box">
+
+<button
+    type="button"
+    class="signature-btn"
+    id="openSignature"
+>
+✍️ Sign Here
+</button>
+
+<div
+    class="signature-preview"
+    id="signaturePreview"
+>
+Signature not added
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SUBMIT
+========================= -->
+
+<button
+    type="submit"
+    class="done-btn"
+>
+😂 DONE — MERA RESULT DIKHAO
+</button>
+
+
+</form>
+
+
+<!-- =========================
+     RESULT
+========================= -->
+
+<div
+    class="result"
+    id="result"
+>
+
+<h2>
+🎉 BAKCHODI RESULT 🎉
+</h2>
+
+<div
+    class="score"
+    id="score"
+>
+0%
+</div>
+
+<div
+    class="rank"
+    id="rank"
+>
+Loading...
+</div>
+
+<p id="resultMessage"></p>
+
+<div class="meter">
+
+<div
+    class="meter-fill"
+    id="meterFill"
+></div>
+
+</div>
+
+<div class="result-buttons">
+
+<button
+    class="print-btn"
+    type="button"
+    onclick="window.print()"
+>
+🖨️ Print
+</button>
+
+<button
+    class="retry-btn"
+    type="button"
+    onclick="location.reload()"
+>
+🔄 Retry
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div class="footer">
+
+★ &nbsp; BAKCHODI KARO &nbsp; ★
+&nbsp;&nbsp;
+KHUSH RAHO
+&nbsp;&nbsp;
+★ &nbsp; DUNIYA KO BAKCHOD BANAO &nbsp; ★
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SIGNATURE MODAL
+========================= -->
+
+<div
+    class="modal"
+    id="signatureModal"
+>
+
+<div class="modal-content">
+
+<h2>
+✍️ Apni Signature Banao
+</h2>
+
+<div class="canvas-area">
+
+<canvas
+    id="signatureCanvas"
+></canvas>
+
+</div>
+
+<div class="modal-buttons">
+
+<button
+    type="button"
+    class="clear-sign"
+    id="clearSignature"
+>
+Clear
+</button>
+
+<button
+    type="button"
+    class="close-sign"
+    id="closeSignature"
+>
+Close
+</button>
+
+<button
+    type="button"
+    class="save-sign"
+    id="saveSignature"
+>
+Save
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+cons
