@@ -7,13 +7,9 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>BAKCHODI KE FARM</title>
+<title>BAKCHODI KE FORM</title>
 
 <style>
-
-/* =========================
-   RESET
-========================= */
 
 *{
     margin:0;
@@ -22,7 +18,7 @@ content="width=device-width, initial-scale=1.0">
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#eee6ca;
     color:#18291e;
     padding:18px;
@@ -36,10 +32,7 @@ body{
     box-shadow:0 8px 25px rgba(0,0,0,.18);
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     position:relative;
@@ -125,7 +118,6 @@ header h2{
     padding:8px 20px;
     font-size:21px;
     font-weight:900;
-
     clip-path:polygon(
         0 0,
         97% 0,
@@ -146,10 +138,7 @@ header h2{
     margin-top:8px;
 }
 
-
-/* =========================
-   FORM
-========================= */
+/* FORM */
 
 form{
     padding:0 14px 20px;
@@ -201,8 +190,7 @@ form{
     font-size:16px;
 }
 
-input[type="radio"],
-input[type="checkbox"]{
+input[type="radio"]{
     width:23px;
     height:23px;
     accent-color:#173b2a;
@@ -233,10 +221,7 @@ textarea:focus{
     border-color:#173b2a;
 }
 
-
-/* =========================
-   NOTICE AREA
-========================= */
+/* BOTTOM */
 
 .bottom-area{
     display:grid;
@@ -245,7 +230,7 @@ textarea:focus{
     margin-top:10px;
 }
 
-.farm-box,
+.from-box,
 .notice-box,
 .approved-box{
     border:2px solid #173b2a;
@@ -255,21 +240,21 @@ textarea:focus{
     background:#fff9e7;
 }
 
-.farm-box{
+.from-box{
     text-align:center;
 }
 
-.farm-box .mini-bull{
+.mini-bull{
     font-size:48px;
 }
 
-.farm-box h2{
+.from-box h2{
     font-family:Georgia,serif;
     font-size:20px;
     color:#173b2a;
 }
 
-.farm-box p{
+.from-box p{
     font-weight:bold;
     margin-top:6px;
 }
@@ -304,10 +289,7 @@ textarea:focus{
     font-weight:900;
 }
 
-
-/* =========================
-   PROGRESS
-========================= */
+/* PROGRESS */
 
 .progress-box{
     margin:15px 0;
@@ -338,10 +320,7 @@ textarea:focus{
     transition:.3s;
 }
 
-
-/* =========================
-   SIGNATURE
-========================= */
+/* SIGNATURE */
 
 .signature-box{
     border:2px solid #173b2a;
@@ -377,10 +356,7 @@ textarea:focus{
     max-height:90px;
 }
 
-
-/* =========================
-   DONE BUTTON
-========================= */
+/* DONE */
 
 .done-btn{
     width:100%;
@@ -393,18 +369,13 @@ textarea:focus{
     font-weight:900;
     border-radius:10px;
     cursor:pointer;
-    transition:.2s;
 }
 
 .done-btn:hover{
     background:#28563d;
-    transform:translateY(-2px);
 }
 
-
-/* =========================
-   RESULT
-========================= */
+/* RESULT */
 
 .result{
     display:none;
@@ -474,10 +445,7 @@ textarea:focus{
     color:white;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer{
     margin-top:15px;
@@ -491,10 +459,7 @@ textarea:focus{
     letter-spacing:1px;
 }
 
-
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
 .modal{
     display:none;
@@ -563,10 +528,7 @@ textarea:focus{
     color:white;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -596,10 +558,7 @@ textarea:focus{
         font-size:15px;
     }
 
-    .bull{
-        display:none;
-    }
-
+    .bull,
     .speech{
         display:none;
     }
@@ -629,13 +588,9 @@ textarea:focus{
     .question h3{
         font-size:15px;
     }
-
 }
 
-
-/* =========================
-   PRINT
-========================= */
+/* PRINT */
 
 @media print{
 
@@ -660,72 +615,52 @@ textarea:focus{
     .result{
         display:block !important;
     }
-
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="container">
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
 <div class="badge">
-    BAKCHODI
+BAKCHODI
 </div>
 
 <div class="bull">
-    🐃
+🐃
 </div>
 
 <div class="speech">
-    BHAI YEH<br>
-    BAKCHODI<br>
-    KA FARM HAI!
+BHAI YEH<br>
+BAKCHODI<br>
+KA FORM HAI!
 </div>
 
 <h1>BAKCHODI</h1>
 
-<h2>KE FARM</h2>
+<h2>KE FORM</h2>
 
 <div class="banner">
-    ★ &nbsp; YAHAN HAR BAKCHOD KA SWAGAT HAI &nbsp; ★
+★ &nbsp; YAHAN HAR BAKCHOD KA SWAGAT HAI &nbsp; ★
 </div>
 
 <div class="sub-banner">
-    APPLY KARO &nbsp; ★ &nbsp; BAKCHOD BANO &nbsp; ★ &nbsp; ZINDAGI BANAO
+APPLY KARO &nbsp; ★ &nbsp; BAKCHOD BANO &nbsp; ★ &nbsp; ZINDAGI BANAO
 </div>
 
 </header>
 
-
-<!-- =========================
-     FORM
-========================= -->
-
 <form
-    id="bakchodForm"
-    autocomplete="off"
-    novalidate
+id="bakchodForm"
+autocomplete="off"
+novalidate
 >
 
-
-<!-- =========================
-     PERSONAL INFORMATION
-========================= -->
-
 <div class="section">
-
-
-<!-- NAME -->
 
 <div class="question">
 
@@ -735,21 +670,18 @@ textarea:focus{
 </h3>
 
 <input
-    type="text"
-    id="name"
-    name="bakchod_random_name_83921"
-    autocomplete="new-password"
-    autocorrect="off"
-    autocapitalize="words"
-    spellcheck="false"
-    placeholder="Apna naam likho"
-    required
+type="text"
+id="name"
+name="bakchod_random_name_83921"
+autocomplete="off"
+autocorrect="off"
+autocapitalize="words"
+spellcheck="false"
+placeholder="Apna naam likho"
+required
 >
 
 </div>
-
-
-<!-- NICKNAME -->
 
 <div class="question">
 
@@ -758,21 +690,18 @@ textarea:focus{
 </h3>
 
 <input
-    type="text"
-    id="nickname"
-    name="bakchod_random_nickname_62841"
-    autocomplete="new-password"
-    autocorrect="off"
-    autocapitalize="words"
-    spellcheck="false"
-    placeholder="Apna bakchod naam likho"
-    required
+type="text"
+id="nickname"
+name="bakchod_random_nickname_62841"
+autocomplete="off"
+autocorrect="off"
+autocapitalize="words"
+spellcheck="false"
+placeholder="Apna bakchod naam likho"
+required
 >
 
 </div>
-
-
-<!-- GENDER -->
 
 <div class="question">
 
@@ -783,54 +712,23 @@ textarea:focus{
 <div class="option-grid">
 
 <label class="option">
-
-<input
-    type="radio"
-    name="gender"
-    value="1"
->
-
+<input type="radio" name="gender" value="1">
 Ladka
-
 </label>
 
-
 <label class="option">
-
-<input
-    type="radio"
-    name="gender"
-    value="1"
->
-
+<input type="radio" name="gender" value="1">
 Ladki
-
 </label>
 
-
 <label class="option">
-
-<input
-    type="radio"
-    name="gender"
-    value="1"
->
-
+<input type="radio" name="gender" value="1">
 Other
-
 </label>
-
 
 <label class="option">
-
-<input
-    type="radio"
-    name="gender"
-    value="1"
->
-
+<input type="radio" name="gender" value="1">
 Batana nahi hai
-
 </label>
 
 </div>
@@ -838,67 +736,37 @@ Batana nahi hai
 </div>
 
 </div>
-
-
-<!-- =========================
-     QUESTIONS
-========================= -->
 
 <div class="section">
 
-
-<!-- Q4 -->
-
 <div class="question">
 
-<h3>
-4. Tum kitne level ke bakchod ho?
-</h3>
+<h3>4. Tum kitne level ke bakchod ho?</h3>
 
 <div class="option-grid">
 
 <label class="option">
-<input
-    type="radio"
-    name="level"
-    value="8"
->
+<input type="radio" name="level" value="8">
 Normal
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="level"
-    value="16"
->
+<input type="radio" name="level" value="16">
 Ultra
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="level"
-    value="22"
->
+<input type="radio" name="level" value="22">
 Ultra Max
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="level"
-    value="28"
->
+<input type="radio" name="level" value="28">
 Pro
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="level"
-    value="35"
->
+<input type="radio" name="level" value="35">
 Legendary
 </label>
 
@@ -906,97 +774,55 @@ Legendary
 
 </div>
 
-
-<!-- Q5 -->
-
 <div class="question">
 
-<h3>
-5. Kya tum logon ko faltu ka gyaan dete ho?
-</h3>
+<h3>5. Kya tum logon ko faltu ka gyaan dete ho?</h3>
 
 <label class="option">
-<input
-    type="radio"
-    name="gyan"
-    value="15"
->
+<input type="radio" name="gyan" value="15">
 Haan, bina pooche bhi
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="gyan"
-    value="10"
->
+<input type="radio" name="gyan" value="10">
 Kabhi-kabhi
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="gyan"
-    value="5"
->
+<input type="radio" name="gyan" value="5">
 Nahi, main khud gyaan leta hoon
 </label>
 
 </div>
 
-
-<!-- Q6 -->
-
 <div class="question">
 
-<h3>
-6. Bina ruke kitni der bakchodi kar sakte ho?
-</h3>
+<h3>6. Bina ruke kitni der bakchodi kar sakte ho?</h3>
 
 <div class="option-grid">
 
 <label class="option">
-<input
-    type="radio"
-    name="duration"
-    value="5"
->
+<input type="radio" name="duration" value="5">
 30 minute
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="duration"
-    value="15"
->
+<input type="radio" name="duration" value="15">
 10–15 ghante
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="duration"
-    value="8"
->
+<input type="radio" name="duration" value="8">
 1 ghanta
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="duration"
-    value="20"
->
+<input type="radio" name="duration" value="20">
 Jab tak saamne wala bhaag na jaaye
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="duration"
-    value="12"
->
+<input type="radio" name="duration" value="12">
 4–5 ghante
 </label>
 
@@ -1004,68 +830,39 @@ Jab tak saamne wala bhaag na jaaye
 
 </div>
 
-
-<!-- Q7 -->
-
 <div class="question">
 
-<h3>
-7. Favourite dialogue kya hai?
-</h3>
+<h3>7. Favourite dialogue kya hai?</h3>
 
 <div class="option-grid">
 
 <label class="option">
-<input
-    type="radio"
-    name="dialogue"
-    value="10"
->
+<input type="radio" name="dialogue" value="10">
 Bhai sun...
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="dialogue"
-    value="10"
->
+<input type="radio" name="dialogue" value="10">
 Chal bakchodi karte hain
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="dialogue"
-    value="10"
->
+<input type="radio" name="dialogue" value="10">
 Ek baat bataun?
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="dialogue"
-    value="10"
->
+<input type="radio" name="dialogue" value="10">
 Apna alag hi scene hai
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="dialogue"
-    value="10"
->
+<input type="radio" name="dialogue" value="10">
 Meri baat sun 😂
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="dialogue"
-    value="10"
->
+<input type="radio" name="dialogue" value="10">
 Kuch aur bolta hoon 😭
 </label>
 
@@ -1073,59 +870,34 @@ Kuch aur bolta hoon 😭
 
 </div>
 
-
-<!-- Q8 -->
-
 <div class="question">
 
-<h3>
-8. Tumhari bakchodi ka main style?
-</h3>
+<h3>8. Tumhari bakchodi ka main style?</h3>
 
 <div class="option-grid">
 
 <label class="option">
-<input
-    type="radio"
-    name="style"
-    value="10"
->
+<input type="radio" name="style" value="10">
 Jokes
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="style"
-    value="10"
->
+<input type="radio" name="style" value="10">
 Gali-galauj
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="style"
-    value="10"
->
+<input type="radio" name="style" value="10">
 Memes
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="style"
-    value="10"
->
+<input type="radio" name="style" value="10">
 Random bakchodi
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="style"
-    value="10"
->
+<input type="radio" name="style" value="10">
 Faltu gyaan
 </label>
 
@@ -1133,50 +905,29 @@ Faltu gyaan
 
 </div>
 
-
-<!-- Q9 -->
-
 <div class="question">
 
-<h3>
-9. Bakchodi kyon karte ho?
-</h3>
+<h3>9. Bakchodi kyon karte ho?</h3>
 
 <div class="option-grid">
 
 <label class="option">
-<input
-    type="radio"
-    name="why"
-    value="10"
->
+<input type="radio" name="why" value="10">
 Maza aata hai
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="why"
-    value="10"
->
+<input type="radio" name="why" value="10">
 Doston ko irritate karne ke liye
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="why"
-    value="10"
->
+<input type="radio" name="why" value="10">
 Bore ho raha hota hoon
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="why"
-    value="10"
->
+<input type="radio" name="why" value="10">
 Bas aadat hai
 </label>
 
@@ -1184,59 +935,34 @@ Bas aadat hai
 
 </div>
 
-
-<!-- Q10 -->
-
 <div class="question">
 
-<h3>
-10. Abhi tak kitne logon ke saath bakchodi ki hai?
-</h3>
+<h3>10. Abhi tak kitne logon ke saath bakchodi ki hai?</h3>
 
 <div class="option-grid">
 
 <label class="option">
-<input
-    type="radio"
-    name="people"
-    value="5"
->
+<input type="radio" name="people" value="5">
 1–5
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="people"
-    value="15"
->
+<input type="radio" name="people" value="15">
 51–100
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="people"
-    value="8"
->
+<input type="radio" name="people" value="8">
 6–20
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="people"
-    value="20"
->
+<input type="radio" name="people" value="20">
 100+ 💀
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="people"
-    value="12"
->
+<input type="radio" name="people" value="12">
 21–50
 </label>
 
@@ -1244,116 +970,67 @@ Bas aadat hai
 
 </div>
 
-
-<!-- Q11 -->
-
 <div class="question">
 
-<h3>
-11. Dost ke ghar ki aunty se bakchodi karoge?
-</h3>
+<h3>11. Dost ke ghar ki aunty se bakchodi karoge?</h3>
 
 <label class="option">
-<input
-    type="radio"
-    name="aunty"
-    value="12"
->
+<input type="radio" name="aunty" value="12">
 Haan, agar comfortable ho
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="aunty"
-    value="8"
->
+<input type="radio" name="aunty" value="8">
 Sirf Hello Aunty 😂
 </label>
 
 <label class="option">
-<input
-    type="radio"
-    name="aunty"
-    value="3"
->
+<input type="radio" name="aunty" value="3">
 Nahi bhai, risk nahi
 </label>
 
 </div>
 
-
-<!-- Q12 -->
-
 <div class="question">
 
-<h3>
-12. Apne baare mein ek line bolo:
-</h3>
+<h3>12. Apne baare mein ek line bolo:</h3>
 
 <textarea
-    id="about"
-    name="about"
-    autocomplete="off"
-    autocorrect="off"
-    spellcheck="false"
-    placeholder="Apne baare mein kuch likho..."
+id="about"
+name="about"
+autocomplete="off"
+autocorrect="off"
+spellcheck="false"
+placeholder="Apne baare mein kuch likho..."
 ></textarea>
 
 </div>
 
-
 </div>
-
-
-<!-- =========================
-     BOTTOM BOXES
-========================= -->
 
 <div class="bottom-area">
 
+<div class="from-box">
 
-<div class="farm-box">
+<div class="mini-bull">🐃</div>
 
-<div class="mini-bull">
-🐃
-</div>
+<h2>BAKCHODI KE FORM</h2>
 
-<h2>
-BAKCHODI KE FARM
-</h2>
+<p>"KABHI SERIOUS MAT HONA"</p>
 
-<p>
-"KABHI SERIOUS MAT HONA"
-</p>
-
-<p>
-★ ★ ★
-</p>
+<p>★ ★ ★</p>
 
 </div>
-
 
 <div class="notice-box">
 
-<h3>
-IMPORTANT NOTICE:
-</h3>
+<h3>IMPORTANT NOTICE:</h3>
 
-<p>
-★ Yahan sirf asli bakchod hi allowed hain.
-</p>
-
-<p>
-★ Jhooth bole to turant ban ho sakte ho.
-</p>
-
-<p>
-★ Bakchodi ki koi limit nahi... par izzat zaroor rakho.
-</p>
+<p>★ Yahan sirf asli bakchod hi allowed hain.</p>
+<p>★ Jhooth bole to turant ban ho sakte ho.</p>
+<p>★ Bakchodi ki koi limit nahi... par izzat zaroor rakho.</p>
 
 </div>
-
 
 <div class="approved-box">
 
@@ -1363,9 +1040,7 @@ APPROVED
 
 <br>
 
-<small>
-BY BAKCHODI KE FARM
-</small>
+<small>BY BAKCHODI KE FARM</small>
 
 <br>
 
@@ -1377,40 +1052,26 @@ BY BAKCHODI KE FARM
 
 </div>
 
-
-<!-- =========================
-     PROGRESS
-========================= -->
-
 <div class="progress-box">
 
 <div class="progress-top">
 
-<span>
-Form Progress
-</span>
+<span>Form Progress</span>
 
-<span id="progressText">
-0/11
-</span>
+<span id="progressText">0/11</span>
 
 </div>
 
 <div class="progress">
 
 <div
-    class="progress-bar"
-    id="progressBar"
+class="progress-bar"
+id="progressBar"
 ></div>
 
 </div>
 
 </div>
-
-
-<!-- =========================
-     SIGNATURE
-========================= -->
 
 <div class="section">
 
@@ -1421,16 +1082,16 @@ Form Progress
 <div class="signature-box">
 
 <button
-    type="button"
-    class="signature-btn"
-    id="openSignature"
+type="button"
+class="signature-btn"
+id="openSignature"
 >
 ✍️ Sign Here
 </button>
 
 <div
-    class="signature-preview"
-    id="signaturePreview"
+class="signature-preview"
+id="signaturePreview"
 >
 Signature not added
 </div>
@@ -1439,45 +1100,32 @@ Signature not added
 
 </div>
 
-
-<!-- =========================
-     SUBMIT
-========================= -->
-
 <button
-    type="submit"
-    class="done-btn"
+type="submit"
+class="done-btn"
 >
 😂 DONE — MERA RESULT DIKHAO
 </button>
 
-
 </form>
 
-
-<!-- =========================
-     RESULT
-========================= -->
-
 <div
-    class="result"
-    id="result"
+class="result"
+id="result"
 >
 
-<h2>
-🎉 BAKCHODI RESULT 🎉
-</h2>
+<h2>🎉 BAKCHODI RESULT 🎉</h2>
 
 <div
-    class="score"
-    id="score"
+class="score"
+id="score"
 >
 0%
 </div>
 
 <div
-    class="rank"
-    id="rank"
+class="rank"
+id="rank"
 >
 Loading...
 </div>
@@ -1487,8 +1135,8 @@ Loading...
 <div class="meter">
 
 <div
-    class="meter-fill"
-    id="meterFill"
+class="meter-fill"
+id="meterFill"
 ></div>
 
 </div>
@@ -1496,17 +1144,17 @@ Loading...
 <div class="result-buttons">
 
 <button
-    class="print-btn"
-    type="button"
-    onclick="window.print()"
+class="print-btn"
+type="button"
+onclick="window.print()"
 >
 🖨️ Print
 </button>
 
 <button
-    class="retry-btn"
-    type="button"
-    onclick="location.reload()"
+class="retry-btn"
+type="button"
+onclick="location.reload()"
 >
 🔄 Retry
 </button>
@@ -1514,11 +1162,6 @@ Loading...
 </div>
 
 </div>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <div class="footer">
 
@@ -1532,52 +1175,43 @@ KHUSH RAHO
 
 </div>
 
-
-<!-- =========================
-     SIGNATURE MODAL
-========================= -->
-
 <div
-    class="modal"
-    id="signatureModal"
+class="modal"
+id="signatureModal"
 >
 
 <div class="modal-content">
 
-<h2>
-✍️ Apni Signature Banao
-</h2>
+<h2>✍️ Apni Signature Banao</h2>
 
 <div class="canvas-area">
 
-<canvas
-    id="signatureCanvas"
-></canvas>
+<canvas id="signatureCanvas"></canvas>
 
 </div>
 
 <div class="modal-buttons">
 
 <button
-    type="button"
-    class="clear-sign"
-    id="clearSignature"
+type="button"
+class="clear-sign"
+id="clearSignature"
 >
 Clear
 </button>
 
 <button
-    type="button"
-    class="close-sign"
-    id="closeSignature"
+type="button"
+class="close-sign"
+id="closeSignature"
 >
 Close
 </button>
 
 <button
-    type="button"
-    class="save-sign"
-    id="saveSignature"
+type="button"
+class="save-sign"
+id="saveSignature"
 >
 Save
 </button>
@@ -1588,12 +1222,7 @@ Save
 
 </div>
 
-
 <script>
-
-/* =========================
-   FORM ELEMENTS
-========================= */
 
 const form =
 document.getElementById("bakchodForm");
@@ -1620,43 +1249,19 @@ const meterFill =
 document.getElementById("meterFill");
 
 
-/* =========================
-   STOP BROWSER AUTOFILL
-========================= */
+/* AUTOFILL CLEAR */
 
-window.addEventListener(
-    "pageshow",
-    function(){
+window.addEventListener("pageshow",function(){
 
-        const name =
-        document.getElementById("name");
+    document.getElementById("name").value = "";
+    document.getElementById("nickname").value = "";
 
-        const nickname =
-        document.getElementById("nickname");
-
-        /*
-        Browser/Google autofill se agar
-        koi naam aa gaya ho to blank kar do.
-        */
-
-        if(name){
-            name.value = "";
-        }
-
-        if(nickname){
-            nickname.value = "";
-        }
-
-    }
-);
+});
 
 
-/* =========================
-   REQUIRED QUESTIONS
-========================= */
+/* REQUIRED QUESTIONS */
 
 const requiredGroups = [
-
     "gender",
     "level",
     "gyan",
@@ -1666,16 +1271,12 @@ const requiredGroups = [
     "why",
     "people",
     "aunty"
-
 ];
 
 
-/* =========================
-   SCORE GROUPS
-========================= */
+/* SCORE */
 
 const scoreGroups = [
-
     "level",
     "gyan",
     "duration",
@@ -1684,236 +1285,146 @@ const scoreGroups = [
     "why",
     "people",
     "aunty"
-
 ];
 
 
-/* =========================
-   MAX SCORE
-========================= */
+/* ACTUAL MAXIMUM */
 
-const MAX_SCORE = 132;
+const MAX_SCORE = 125;
 
 
-/* =========================
-   PROGRESS
-========================= */
+/* PROGRESS */
 
 function updateProgress(){
 
     let completed = 0;
 
-
     const name =
-    document.getElementById("name")
-    .value
-    .trim();
-
+    document.getElementById("name").value.trim();
 
     const nickname =
-    document.getElementById("nickname")
-    .value
-    .trim();
+    document.getElementById("nickname").value.trim();
 
+    if(name) completed++;
 
-    if(name){
-        completed++;
-    }
+    if(nickname) completed++;
 
+    requiredGroups.forEach(function(group){
 
-    if(nickname){
-        completed++;
-    }
+        const checked =
+        document.querySelector(
+            `input[name="${group}"]:checked`
+        );
 
+        if(checked) completed++;
 
-    requiredGroups.forEach(
-        group => {
-
-            const checked =
-            document.querySelector(
-                `input[name="${group}"]:checked`
-            );
-
-
-            if(checked){
-                completed++;
-            }
-
-        }
-    );
-
+    });
 
     const total = 11;
-
 
     const percent =
     (completed / total) * 100;
 
-
     progressText.textContent =
     `${completed}/${total}`;
 
-
     progressBar.style.width =
     percent + "%";
-
 }
 
-
-/* =========================
-   LISTENERS
-========================= */
 
 form.addEventListener(
     "input",
     updateProgress
 );
 
-
 form.addEventListener(
     "change",
     updateProgress
 );
 
-
 updateProgress();
 
 
-/* =========================
-   SCORE
-========================= */
+/* GET SCORE */
 
 function getScore(){
 
     let score = 0;
 
+    scoreGroups.forEach(function(group){
 
-    scoreGroups.forEach(
-        group => {
+        const checked =
+        document.querySelector(
+            `input[name="${group}"]:checked`
+        );
 
-            const checked =
-            document.querySelector(
-                `input[name="${group}"]:checked`
-            );
-
-
-            if(checked){
-
-                score +=
-                Number(checked.value);
-
-            }
-
+        if(checked){
+            score += Number(checked.value);
         }
-    );
 
+    });
 
     return score;
-
 }
 
 
-/* =========================
-   RANK
-========================= */
+/* RANK */
 
 function getRank(score){
 
     const percent =
     (score / MAX_SCORE) * 100;
 
-
     if(percent >= 90){
-
         return {
-
-            rank:
-            "🔥 LEGENDARY BAKCHOD",
-
+            rank:"🔥 LEGENDARY BAKCHOD",
             message:
             "Bhai tumhari bakchodi ka level alag hi dimension mein hai 😂"
-
         };
-
     }
-
 
     if(percent >= 75){
-
         return {
-
-            rank:
-            "😂 PRO BAKCHOD",
-
+            rank:"😂 PRO BAKCHOD",
             message:
             "Professional level ki bakchodi detected 😂"
-
         };
-
     }
-
 
     if(percent >= 55){
-
         return {
-
-            rank:
-            "😎 ADVANCED BAKCHOD",
-
+            rank:"😎 ADVANCED BAKCHOD",
             message:
             "Experience clearly dikh raha hai 😂"
-
         };
-
     }
-
 
     if(percent >= 35){
-
         return {
-
-            rank:
-            "🤣 NORMAL BAKCHOD",
-
+            rank:"🤣 NORMAL BAKCHOD",
             message:
             "Bakchodi hai, lekin control mein hai."
-
         };
-
     }
-
 
     if(percent >= 20){
-
         return {
-
-            rank:
-            "🙂 BEGINNER BAKCHOD",
-
+            rank:"🙂 BEGINNER BAKCHOD",
             message:
             "Training abhi baaki hai 😂"
-
         };
-
     }
 
-
     return {
-
-        rank:
-        "🗿 SHAANT INSAAN",
-
+        rank:"🗿 SHAANT INSAAN",
         message:
         "Tumhari bakchodi abhi loading mein hai."
-
     };
-
 }
 
 
-/* =========================
-   SUBMIT
-========================= */
+/* SUBMIT */
 
 form.addEventListener(
     "submit",
@@ -1921,143 +1432,102 @@ form.addEventListener(
 
         e.preventDefault();
 
-
         const name =
         document.getElementById("name")
         .value
         .trim();
-
 
         const nickname =
         document.getElementById("nickname")
         .value
         .trim();
 
-
         if(!name){
-
-            alert(
-                "Pehle naam likho 😂"
-            );
-
+            alert("Pehle naam likho 😂");
             return;
-
         }
-
 
         if(!nickname){
-
-            alert(
-                "Nickname bhi likho 😭"
-            );
-
+            alert("Nickname bhi likho 😭");
             return;
-
         }
 
-
-        for(
-            const group of requiredGroups
-        ){
+        for(const group of requiredGroups){
 
             const checked =
             document.querySelector(
                 `input[name="${group}"]:checked`
             );
 
-
             if(!checked){
-
                 alert(
                     "Bhai saare questions complete karo 😂"
                 );
-
                 return;
-
             }
 
         }
 
+        const score = getScore();
 
-        const score =
-        getScore();
-
-
-        const data =
-        getRank(score);
-
+        const data = getRank(score);
 
         const percent =
-        Math.round(
-            (score / MAX_SCORE) * 100
+        Math.min(
+            100,
+            Math.round(
+                (score / MAX_SCORE) * 100
+            )
         );
-
 
         scoreBox.textContent =
         `${percent}%`;
 
-
         rankBox.textContent =
         data.rank;
-
 
         resultMessage.textContent =
         `${name} aka ${nickname} — ${data.message}`;
 
-
         meterFill.style.width =
         percent + "%";
-
 
         result.style.display =
         "block";
 
-
         result.scrollIntoView({
-
             behavior:"smooth"
-
         });
 
     }
 );
 
 
-/* =========================
-   SIGNATURE
-========================= */
+/* SIGNATURE */
 
 const modal =
 document.getElementById("signatureModal");
 
-
 const canvas =
 document.getElementById("signatureCanvas");
-
 
 const ctx =
 canvas.getContext("2d");
 
-
 const openSignature =
 document.getElementById("openSignature");
-
 
 const closeSignature =
 document.getElementById("closeSignature");
 
-
 const clearSignature =
 document.getElementById("clearSignature");
-
 
 const saveSignature =
 document.getElementById("saveSignature");
 
-
 const signaturePreview =
 document.getElementById("signaturePreview");
-
 
 let drawing = false;
 
@@ -2066,39 +1536,28 @@ let lastX = 0;
 let lastY = 0;
 
 
-/* =========================
-   CANVAS SIZE
-========================= */
-
 function resizeCanvas(){
 
     const rect =
     canvas.getBoundingClientRect();
 
-
     const ratio =
     window.devicePixelRatio || 1;
-
 
     canvas.width =
     rect.width * ratio;
 
-
     canvas.height =
     rect.height * ratio;
 
-
     ctx.setTransform(
-
         ratio,
         0,
         0,
         ratio,
         0,
         0
-
     );
-
 
     ctx.lineWidth = 2.5;
 
@@ -2106,23 +1565,15 @@ function resizeCanvas(){
 
     ctx.lineJoin = "round";
 
-    ctx.strokeStyle =
-    "#173b2a";
-
+    ctx.strokeStyle = "#173b2a";
 }
 
-
-/* =========================
-   OPEN SIGNATURE
-========================= */
 
 openSignature.addEventListener(
     "click",
     function(){
 
-        modal.style.display =
-        "flex";
-
+        modal.style.display = "flex";
 
         resizeCanvas();
 
@@ -2130,68 +1581,43 @@ openSignature.addEventListener(
 );
 
 
-/* =========================
-   CLOSE SIGNATURE
-========================= */
-
 closeSignature.addEventListener(
     "click",
     function(){
 
-        modal.style.display =
-        "none";
+        modal.style.display = "none";
 
     }
 );
 
-
-/* =========================
-   CLEAR SIGNATURE
-========================= */
 
 clearSignature.addEventListener(
     "click",
     function(){
 
         ctx.clearRect(
-
             0,
             0,
             canvas.width,
             canvas.height
-
         );
 
     }
 );
 
 
-/* =========================
-   GET POSITION
-========================= */
-
 function getPosition(e){
 
     const rect =
     canvas.getBoundingClientRect();
 
-
     return {
-
-        x:
-        e.clientX - rect.left,
-
-        y:
-        e.clientY - rect.top
-
+        x:e.clientX - rect.left,
+        y:e.clientY - rect.top
     };
 
 }
 
-
-/* =========================
-   START DRAWING
-========================= */
 
 canvas.addEventListener(
     "pointerdown",
@@ -2199,18 +1625,11 @@ canvas.addEventListener(
 
         drawing = true;
 
-
         const pos =
         getPosition(e);
 
-
-        lastX =
-        pos.x;
-
-
-        lastY =
-        pos.y;
-
+        lastX = pos.x;
+        lastY = pos.y;
 
         canvas.setPointerCapture(
             e.pointerId
@@ -2220,62 +1639,40 @@ canvas.addEventListener(
 );
 
 
-/* =========================
-   DRAW
-========================= */
-
 canvas.addEventListener(
     "pointermove",
     function(e){
 
-        if(!drawing){
-            return;
-        }
-
+        if(!drawing) return;
 
         const pos =
         getPosition(e);
 
-
         ctx.beginPath();
-
 
         ctx.moveTo(
             lastX,
             lastY
         );
 
-
         ctx.lineTo(
             pos.x,
             pos.y
         );
 
-
         ctx.stroke();
 
-
-        lastX =
-        pos.x;
-
-
-        lastY =
-        pos.y;
+        lastX = pos.x;
+        lastY = pos.y;
 
     }
 );
 
 
-/* =========================
-   STOP DRAWING
-========================= */
-
 canvas.addEventListener(
     "pointerup",
     function(){
-
         drawing = false;
-
     }
 );
 
@@ -2283,51 +1680,33 @@ canvas.addEventListener(
 canvas.addEventListener(
     "pointercancel",
     function(){
-
         drawing = false;
-
     }
 );
 
-
-/* =========================
-   SAVE SIGNATURE
-========================= */
 
 saveSignature.addEventListener(
     "click",
     function(){
 
         const image =
-        canvas.toDataURL(
-            "image/png"
-        );
-
+        canvas.toDataURL("image/png");
 
         signaturePreview.innerHTML =
         `<img src="${image}" alt="Signature">`;
 
-
-        modal.style.display =
-        "none";
+        modal.style.display = "none";
 
     }
 );
 
-
-/* =========================
-   CLICK OUTSIDE
-========================= */
 
 modal.addEventListener(
     "click",
     function(e){
 
         if(e.target === modal){
-
-            modal.style.display =
-            "none";
-
+            modal.style.display = "none";
         }
 
     }
